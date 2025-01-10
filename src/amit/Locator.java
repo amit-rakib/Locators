@@ -57,6 +57,10 @@ public class Locator {
 					
 	    String text = driver.findElement(By.cssSelector("p.error")).getText();
 	    System.out.print(text);
+	    
+	    // Link Text
+	    
+	    driver.findElement(By.linkText("Forgot your password?")).click();
 		
 		
 
