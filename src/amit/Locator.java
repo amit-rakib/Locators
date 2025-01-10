@@ -1,5 +1,7 @@
 package amit;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,6 +14,9 @@ public class Locator {
 		
 		WebDriver driver = new ChromeDriver();
 		
+		
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
 		// Locators are -
 		// ID
 		//Xpath
@@ -41,6 +46,17 @@ public class Locator {
 		driver.findElement(By.name("inputPassword")).sendKeys("hello123");
 		driver.findElement(By.className("signInBtn")).click();
 		
+		
+//		How to make CSS Selector:
+//
+//			1. tag name.classname  ( if class name available)
+//
+//			2. tagname#id   (if id available)
+//
+//			3. tagname[attribute='value']
+					
+	    String text = driver.findElement(By.cssSelector("p.error")).getText();
+	    System.out.print(text);
 		
 		
 
