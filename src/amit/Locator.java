@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Locator {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		WebDriver driver = new ChromeDriver();
@@ -61,6 +61,15 @@ public class Locator {
 	    // Link Text
 	    
 	    driver.findElement(By.linkText("Forgot your password?")).click();
+	    
+	    
+	    driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("amit");
+	    driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys("amit123@gmail.com");
+	    driver.findElement(By.xpath("//input[@placeholder='Phone Number']")).sendKeys("01704622382");
+	    
+	    
+	  //  Thread.sleep(3000);
+	    driver.findElement(By.className("reset-pwd-btn")).click();
 		
 		
 
