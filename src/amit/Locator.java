@@ -62,16 +62,30 @@ public class Locator {
 	    
 	    driver.findElement(By.linkText("Forgot your password?")).click();
 	    
-	    
+	    // Xpath
 	    driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("amit");
-	    driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys("amit123@gmail.com");
-	    driver.findElement(By.xpath("//input[@placeholder='Phone Number']")).sendKeys("01704622382");
+	    
+	    // CSS Selector
+	    driver.findElement(By.cssSelector("input[placeholder='Email']")).sendKeys("AmitRakib");
+	    
+	    // Xpath with index
+	    driver.findElement(By.xpath("//input[@type='text'][2]")).clear();
+	    
+	    // CSS Selector with nth child index
+	    driver.findElement(By.cssSelector("input[type='text']:nth-child(3)")).sendKeys("amit123@gmail.com");
+	    
+	    // Xpath with Parent Child traverse index
+	    driver.findElement(By.xpath("//div/form/input[3]")).sendKeys("1704622382");
 	    
 	    
-	  //  Thread.sleep(3000);
-	    driver.findElement(By.className("reset-pwd-btn")).click();
+	    Thread.sleep(3000);
+	    
+	    // CSS Selector with dot and Class Name
+	    driver.findElement(By.cssSelector(".reset-pwd-btn")).click();
 		
-		
+	    // CSS Selector with Parent Child traverse index
+        String text2 =  driver.findElement(By.cssSelector("form p")).getText();  //Note: in css selector parent-child traverse do not need \ slashes 
+        System.out.println(text2);
 
 	}
 
