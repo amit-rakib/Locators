@@ -103,7 +103,15 @@ public class Locator {
         // Xpath using partial text ( Regular expression css )
         driver.findElement(By.xpath("//button[contains(@type,'submit')]")).click();
         
-        driver.close();
+	    Thread.sleep(3000);
+
+        // Tag Name
+        String text3 = driver.findElement(By.tagName("p")).getText();
+        System.out.println(text3);
+        
+        driver.findElement(By.className("logout-btn")).click();
+        
+       // driver.close();
         
         
 	}
