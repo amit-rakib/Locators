@@ -56,7 +56,7 @@ public class Locator {
 //			3. tagname[attribute='value']
 					
 	    String text = driver.findElement(By.cssSelector("p.error")).getText();
-	    System.out.print(text);
+	    System.out.println(text);
 	    
 	    // Link Text
 	    
@@ -86,7 +86,26 @@ public class Locator {
 	    // CSS Selector with Parent Child traverse index
         String text2 =  driver.findElement(By.cssSelector("form p")).getText();  //Note: in css selector parent-child traverse do not need \ slashes 
         System.out.println(text2);
-
+        
+        driver.findElement(By.className("go-to-login-btn")).click();
+        
+	    Thread.sleep(3000);
+        
+        // CSS Selector with ID
+        driver.findElement(By.cssSelector("#inputUsername")).sendKeys("amit");
+        
+        // CSS selector using partial text ( Regular expression css )
+        driver.findElement(By.cssSelector("input[type*='pass']")).sendKeys("rahulshettyacademy");
+        
+        driver.findElement(By.id("chkboxOne")).click();
+        driver.findElement(By.id("chkboxTwo")).click();
+        
+        // Xpath using partial text ( Regular expression css )
+        driver.findElement(By.xpath("//button[contains(@type,'submit')]")).click();
+        
+        driver.close();
+        
+        
 	}
 
 }
