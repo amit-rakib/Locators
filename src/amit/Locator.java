@@ -59,7 +59,6 @@ public class Locator {
 	    System.out.println(text);
 	    
 	    // Link Text
-	    
 	    driver.findElement(By.linkText("Forgot your password?")).click();
 	    
 	    // Xpath
@@ -109,7 +108,14 @@ public class Locator {
         String text3 = driver.findElement(By.tagName("p")).getText();
         System.out.println(text3);
         
-        driver.findElement(By.className("logout-btn")).click();
+        
+        // Any element based on text Xpath
+        driver.findElement(By.xpath("//button[text()='Log Out']")).click();
+        
+        // put star if you dont want to use tagname
+     //   driver.findElement(By.xpath("//*[text()='Log Out']")).click();
+
+        
         
        // driver.close();
         

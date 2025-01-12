@@ -30,6 +30,8 @@ public class Assertion {
         Assert.assertEquals(Actual, Expected);
         
         driver.findElement(By.className("logout-btn")).click();
+        
+        driver.close();
 		
 
 	}
