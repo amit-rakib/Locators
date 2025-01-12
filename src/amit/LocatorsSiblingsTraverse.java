@@ -13,12 +13,12 @@ public class LocatorsSiblingsTraverse {
 		
 		// Absulate xpath if you start from the top means from htlm tag that is called absulate xpath and it starts with one / slash
 		// Parent to child traverse
-		//driver.findElement(By.xpath("//html/body/header/div/button[1]")).click();
+		driver.findElement(By.xpath("//html/body/header/div/button[1]")).click();
 		
 		
 		// Relative xpath if you start from anywhere at the middle, at any tag that is called relative xpath and it starts with // slash
 		// Parent to child traverse
-		//driver.findElement(By.xpath("//header/div[1]")).click();
+		driver.findElement(By.xpath("//header/div[1]")).click();
 		
 		
 		// Siblings traverse 
