@@ -16,11 +16,18 @@ public class handleDropdowns {
 	    WebElement staticDropdown =	driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
 	    Select dropdown = new Select(staticDropdown);
 	    
+	    
+	    // Select By Index
 	    dropdown.selectByIndex(3);
         String text = dropdown.getFirstSelectedOption().getText();
+        System.out.println(text);
+      
+        
+        dropdown.selectByContainsVisibleText("AED");
+        String text2 = dropdown.getFirstSelectedOption().getText();
+        System.out.println(text2);
 
-	    
-System.out.println(text);
+
 	}
 
 }
