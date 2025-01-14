@@ -22,11 +22,15 @@ public class handleDropdowns {
         String text = dropdown.getFirstSelectedOption().getText();
         System.out.println(text);
       
-        
+        // Select By Visible Text
         dropdown.selectByContainsVisibleText("AED");
         String text2 = dropdown.getFirstSelectedOption().getText();
         System.out.println(text2);
-
+        
+        // Select By Value
+        dropdown.selectByValue("INR");
+        String text3 = dropdown.getFirstSelectedOption().getText();
+        System.out.println(text3);
 
 	}
 
